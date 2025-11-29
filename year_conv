@@ -2,3 +2,46 @@
 # SPDX-FileCopyrightText: 2025 Kanta Hirazawa
 # SPDX-License-Identifier: BSD-3-Clause
 
+import sys
+import re
+
+def ad_to_wareki(year):
+    if year >= 2019:
+        return f"令和{year - 2018}年"
+    elif year >= 1989:
+        return f"平成{year - 1988}年"
+    elif year >= 1926:
+        return f"昭和{year - 1925}年"
+    elif year >= 1912:
+        return f"大正{year - 1911}年"
+    elif year >= 1868:
+        return f"明治{year - 1867}年"
+    else:
+        return "明治以前"
+
+def wareki_to_ad(text):
+    match = re.match(r"([MTSHRmtshr]|明治|大正|昭和|平成|令和)(\d+)", text)
+    
+    if not match:
+        return None
+
+    era = match.group(1)
+    year = int(match.group(2))
+    
+    offsets = {
+        'R': 2018, '令和': 2018,
+        'H': 1988, '平成': 1988,
+        'S': 1925, '昭和': 1925,
+        'T': 1911, '大正': 1911,
+        'M': 1867, '明治': 1867
+    }
+    
+    key = era.upper() if len(era) == 1 else era
+    
+    if key in offsets:
+        return str(offsets[key] + year)
+    else:
+        return None
+
+if __name__ == "__main__":
+    main()
