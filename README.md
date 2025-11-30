@@ -60,6 +60,8 @@ $ ./year_conv < years.txt
 
 ## 参考文献
 * 労働基準監督署：和暦西暦早見表
+  
   https://jsite.mhlw.go.jp/fukushima-roudoukyoku/content/contents/Book1.pdf
 * Python 3.x ドキュメント: re — 正規表現操作
+  
   https://docs.python.org/ja/3/library/re.html
