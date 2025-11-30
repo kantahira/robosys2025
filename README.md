@@ -12,20 +12,20 @@
 ## インストール方法
 リポジトリをクローンし、実行権限を与えてください。
 ```bash
-git clone https://github.com/kantahira/robosys2025
-cd robosys2025
-chmod +x year_conv
+$ git clone https://github.com/kantahira/robosys2025
+$ cd robosys2025
+$ chmod +x year_conv
 ```
 
 ## 使い方
-・西暦から和暦変換
+・**西暦から和暦変換**
 
 　西暦（数字のみ）を入力します。
 ```bash
 $ echo 2025 | ./year_conv
 令和7年
 ```
-・和暦から西暦へ変換
+・**和暦から西暦へ変換**
 
 　元号と年数を入力します。アルファベット（R, H, S, T, M）にも対応しています。
 ```bash
@@ -35,7 +35,7 @@ $ echo 令和5 | ./year_conv
 $ echo S60 | ./year_conv
 1985
 ```
-・テキストファイルからまとめて変換も可能です
+・**テキストファイルからまとめて変換も可能です**
 ```bash
 $ cat years.txt
 2024
@@ -59,3 +59,9 @@ $ ./year_conv < years.txt
 ・このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
 
 ・© 2025 Kanta Hirazawa
+
+## 参考文献
+* 労働基準監督署：和暦西暦早見表
+  https://jsite.mhlw.go.jp/fukushima-roudoukyoku/content/contents/Book1.pdf
+* Python 3.x ドキュメント: re — 正規表現操作
+  https://docs.python.org/ja/3/library/re.html
