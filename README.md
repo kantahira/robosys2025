@@ -4,10 +4,9 @@
 # year_conv
 西暦と和暦を相互に変換するコマンドです。標準入出力を使用しているため、パイプライン処理に組み込めます。
 
-[![test](https://github.com/kantahira/robosys2025/blob/main/year_conv)](https://github.com/kantahira/robosys2025/blob/main/test.bash)
-
 ## 機能
 ・**西暦 → 和暦**: 数字を入力すると、対応する和暦（明治〜令和）を出力します。
+
 ・**和暦 → 西暦**: 元号（漢字またはアルファベット）と数字の組み合わせを入力すると、西暦を出力します。
 
 ## 必要な環境
