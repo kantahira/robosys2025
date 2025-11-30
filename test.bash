@@ -1,23 +1,15 @@
 #!/usr/bin/bash[ "${out}" =  15 ] || ng "$LINENO"
-# SPDX-FileCopyrightText: 2025 Ryuichi Ueda 　　　　　
-# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-FileCopyrightText: 2025 Kanta Hirazawa
+# SPDX-License-Identifier: BSD-3-Clause
 
-ng () {
-	echo ${1}行目が違うよ
-	res=1
-}
+out=$(echo 2025 | ./year_conv)
+[ "${out}" = "令和7年" ] || exit 1
 
-res=0
+out=$(echo R7 | ./year_conv)
+[ "${out}" = "2025" ] || exit 1
 
-outout=$(seq 5 | ./plus)
-[ "${out}" =  15 ] || ng "$LINENO"
-[ "$?" =  1 ] || ng "$LINENO"
-[ "${out}" =  "" ] || ng "$LINENO"
+out=$(echo 昭和64 | ./year_conv)
+[ "${out}" = "1989" ] || exit 1
 
-out=$(echo | ./plus)
-[ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" =  "" ] || ng "$LINENO"
-
-[ "${res}" = 0 ] && echo OK
-
-exit $res
+echo "OK"
+exit 0
