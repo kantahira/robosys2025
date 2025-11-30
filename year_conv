@@ -35,13 +35,20 @@ def wareki_to_ad(text):
         'T': 1911, '大正': 1911,
         'M': 1867, '明治': 1867
     }
-    
-    key = era.upper() if len(era) == 1 else era
-    
-    if key in offsets:
-        return str(offsets[key] + year)
-    else:
-        return None
+
+def main():
+    for line in sys.stdin:
+        line = line.strip()
+        
+        print(f"入力された値: {line}")
+        
+        if line.isdigit():
+            print(ad_to_wareki(int(line)))
+        else:
+            print(wareki_to_ad(line))
+
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
