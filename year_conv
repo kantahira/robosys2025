@@ -47,6 +47,9 @@ def main():
     for line in sys.stdin:
         line = line.strip()
         
+        if not line:
+            continue
+        
         if line.isdigit():
             print(ad_to_wareki(int(line)))
         else:
