@@ -19,12 +19,14 @@ chmod +x year_conv
 
 ## 使い方
 ・西暦から和暦変換
+
 　西暦（数字のみ）を入力します。
 ```bash
 $ echo 2025 | ./year_conv
 令和7年
 ```
 ・和暦から西暦へ変換
+
 　元号と年数を入力します。アルファベット（R, H, S, T, M）にも対応しています。
 ```bash
 $ echo 令和5 | ./year_conv
@@ -47,6 +49,7 @@ $ ./year_conv < years.txt
 
 ## 必要な環境
 ・Python 3.7 以上
+
 ・Linux環境
 
 ## テスト環境
@@ -54,4 +57,5 @@ $ ./year_conv < years.txt
 
 ## ライセンスと著作権
 ・このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
+
 ・© 2025 Kanta Hirazawa
