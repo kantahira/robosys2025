@@ -1,2 +1,15 @@
 # robosys2025
-第四回講義の課題
+ロボットシステム学第一回課題のリポジトリ
+
+# year_conv
+西暦と和暦を相互に変換するコマンドです。標準入出力を使用しているため、パイプライン処理に組み込めます。
+
+[![test](https://github.com/kantahira/robosys2025/blob/main/year_conv)](https://github.com/kantahira/robosys2025/blob/main/test.bash)
+
+## 機能
+・**西暦 → 和暦**: 数字を入力すると、対応する和暦（明治〜令和）を出力します。
+・**和暦 → 西暦**: 元号（漢字またはアルファベット）と数字の組み合わせを入力すると、西暦を出力します。
+
+## 必要な環境
+・Python 3.7 以上
+・Linux環境 (Ubuntu 20.04/22.04/24.04 で動作確認済み)
