@@ -1,15 +1,34 @@
-#!/usr/bin/bash[ "${out}" =  15 ] || ng "$LINENO"
-# SPDX-FileCopyrightText: 2025 Kanta Hirazawa
+#!/bin/bash
+# SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-License-Identifier: BSD-3-Clause
 
+set -e
+set -x
+
 out=$(echo 2025 | ./year_conv)
-[ "${out}" = "令和7年" ] || exit 1
+if [ "${out}" = "令和7年" ]; then
+    echo "Test 1 OK"
+else
+    echo "Test 1 Failed: ${out}"
+    exit 1
+fi
 
-out=$(echo R7 | ./year_conv)
-[ "${out}" = "2025" ] || exit 1
+out=$(echo s64 | ./year_conv)
+if [ "${out}" = "1989" ]; then
+    echo "Test 2 OK"
+else
+    echo "Test 2 Failed: ${out}"
+    exit 1
+fi
 
-out=$(echo 昭和64 | ./year_conv)
-[ "${out}" = "1989" ] || exit 1
+echo "test" | ./year_conv 2> err.log || true
 
-echo "OK"
+if grep -q "計算不可" err.log; then
+    echo "Test 3 OK"
+else
+    echo "Test 3 Failed"
+    exit 1
+fi
+
+rm -f err.log
 exit 0

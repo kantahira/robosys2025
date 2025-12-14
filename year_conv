@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2025 Kanta Hirazawa
+# SPDX-FileCopyrightText: 2025 Your Name
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
-import re
 
 def ad_to_wareki(year):
     if year >= 2019:
@@ -19,45 +18,41 @@ def ad_to_wareki(year):
     else:
         return "明治以前"
 
-def wareki_to_ad(text):
-    match = re.match(r"([MTSHRmtshr]|明治|大正|昭和|平成|令和)(\d+)", text)
-    
-    if not match:
-        return None
-
-    era = match.group(1)
-    year = int(match.group(2))
-    
-    offsets = {
-        'R': 2018, '令和': 2018,
-        'H': 1988, '平成': 1988,
-        'S': 1925, '昭和': 1925,
-        'T': 1911, '大正': 1911,
-        'M': 1867, '明治': 1867
-    }
-
-    key = era.upper() if len(era) == 1 else era
-    
-    if key in offsets:
-        return str(offsets[key] + year)
+def wareki_to_ad(era_char, year_num):
+    if era_char == 'r':
+        return 2018 + year_num
+    elif era_char == 'h':
+        return 1988 + year_num
+    elif era_char == 's':
+        return 1925 + year_num
+    elif era_char == 't':
+        return 1911 + year_num
+    elif era_char == 'm':
+        return 1867 + year_num
     else:
         return None
 
 def main():
     for line in sys.stdin:
         line = line.strip()
-        
         if not line:
             continue
-        
+
         if line.isdigit():
             print(ad_to_wareki(int(line)))
+        
         else:
-            result = wareki_to_ad(line)
-            if result:
-                print(result)
+            first_char = line[0].lower()
+            rest_str = line[1:]
+
+            if rest_str.isdigit():
+                ad_year = wareki_to_ad(first_char, int(rest_str))
+                if ad_year:
+                    print(ad_year)
+                else:
+                    print(f"不明な元号: {line}", file=sys.stderr)
             else:
-                print(f"変換不可: {line}")
+                print(f"計算不可: {line}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()
