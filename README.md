@@ -56,8 +56,9 @@ $ ./year_conv < years.txt
 
 ## ライセンスと著作権
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-* このパッケージのコードの一部は、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです。
-* https://github.com/ryuichiueda/slides_marp
+
+* このパッケージのコードの一部は、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです。[ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp)
+
 * © 2025 Kanta Hirazawa
 
 ## 参考文献
@@ -68,6 +69,3 @@ $ ./year_conv < years.txt
 * 労働基準監督署：和暦西暦早見表
   
   https://jsite.mhlw.go.jp/fukushima-roudoukyoku/content/contents/Book1.pdf
-* Python 3.x ドキュメント: re — 正規表現操作
-  
-  https://docs.python.org/ja/3/library/re.html
