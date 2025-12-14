@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 Kanta Hirazawa
 # SPDX-License-Identifier: BSD-3-Clause
 
 set -e
