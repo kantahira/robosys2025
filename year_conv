@@ -6,15 +6,15 @@ import sys
 
 def ad_to_wareki(year):
     if year >= 2019:
-        return f"R{year - 2018}年"
+        return f"令和{year - 2018}年"
     elif year >= 1989:
-        return f"H{year - 1988}年"
+        return f"平成{year - 1988}年"
     elif year >= 1926:
-        return f"S{year - 1925}年"
+        return f"昭和{year - 1925}年"
     elif year >= 1912:
-        return f"T{year - 1911}年"
+        return f"大正{year - 1911}年"
     elif year >= 1868:
-        return f"M{year - 1867}年"
+        return f"明治{year - 1867}年"
     else:
         return "明治以前"
 
