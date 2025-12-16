@@ -6,7 +6,7 @@ set -e
 set -x
 
 out=$(echo 2025 | ./year_conv)
-if [ "${out}" = "令和7年" ]; then
+if [ "${out}" = "R7年" ]; then
     echo "Test 1 OK"
 else
     echo "Test 1 Failed: ${out}"
