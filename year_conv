@@ -41,14 +41,6 @@ def main():
         if line.isdigit():
             print(ad_to_wareki(int(line)))
         
-        elif line.startswith("昭和"):
-            num_str = line.replace("昭和", "").replace("年", "")
-            year = int(num_str)
-            print(1925 + year)
-        elif line.startswith("平成"):
-            num_str = line.replace("平成", "").replace("年", "")
-            print(1988 + int(num_str))
-
         else:
             first_char = line[0].lower()
             rest_str = line[1:]
