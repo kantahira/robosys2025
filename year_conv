@@ -50,7 +50,7 @@ def main():
                 if ad_year:
                     print(ad_year)
                 else:
-                    print(f"不明な元号: {line}", file=sys.stderr)
+                    print(f"不明な元号ですline}", file=sys.stderr)
             else:
                 print(f"計算不可: {line}", file=sys.stderr)
 
