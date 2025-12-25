@@ -1,6 +1,7 @@
 # year_conv
-西暦と和暦を相互に変換するコマンドです。
 [![test](https://github.com/kantahira/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/kantahira/robosys2025/actions/workflows/test.yml)
+
+西暦と和暦を相互に変換するコマンドです。
 
 ## 機能
 * **西暦 → 和暦**: 数字を入力すると、和暦を出力します。(2025 → 令和7年)
@@ -20,14 +21,14 @@ $ chmod +x year_conv
 ## 使い方
 * **西暦から和暦変換**
 
-　西暦（数字のみ）を入力します。
+西暦（数字のみ）を入力します。
 ```bash
 $ echo 2025 | ./year_conv
 令和7年
 ```
 * **和暦から西暦へ変換**
 
-　元号と年数を入力します。元号はアルファベット（R, H, S, T, M）で入力してください。
+元号と年数を入力します。元号はアルファベット（R, H, S, T, M）で入力してください。
 ```bash
 $ echo r5 | ./year_conv
 2023
