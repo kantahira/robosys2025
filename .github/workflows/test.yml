@@ -1,14 +1,12 @@
 name: test
-
-on:
-  push:
-  workflow_dispatch:
-
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10","3.11", "3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Run tests
-        run: bash test.bash
+    - uses: actions/checkout@v3
+    - name: All test
+      run: bash -xv ./test.bash
