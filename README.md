@@ -1,7 +1,6 @@
 # year_conv
 西暦と和暦を相互に変換するコマンドです。
-
-[![test]((https://github.com/kantahira/robosys2025/blob/main/.github/workflows/test.yml)](https://github.com/kantahira/robosys2025/blob/main/year_conv)
+[![test](https://github.com/kantahira/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/kantahira/robosys2025/actions/workflows/test.yml)
 
 ## 機能
 * **西暦 → 和暦**: 数字を入力すると、和暦を出力します。(2025 → 令和7年)
