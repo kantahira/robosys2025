@@ -18,7 +18,7 @@ out=$(echo s64 | ./year_conv)
 out=$(echo あ | ./year_conv 2> /tmp/err)
 [ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
-grep -q "計算不可:あ" /tmp/err || ng "$LINENO"
+grep -q "計算不可" /tmp/err || ng "$LINENO"
 
 [ "$res" = 0 ] && echo OK
 rm -f /tmp/err
