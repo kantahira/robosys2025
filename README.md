@@ -13,9 +13,9 @@
 ## インストール方法
 リポジトリをクローンし、実行権限を与えてください。
 ```bash
-$ git clone https://github.com/kantahira/robosys2025
-$ cd robosys2025
-$ chmod +x year_conv
+git clone https://github.com/kantahira/robosys2025
+cd robosys2025
+chmod +x year_conv
 ```
 
 ## 使い方
@@ -35,11 +35,8 @@ $ echo r5 | ./year_conv
 ```
 
 ## 必要な環境
-* Python 3.7 以上
+* Python 3.7,3.8,3.9,3.10,3.11,3.12
 * Linux環境
-
-## テスト環境
-* Ubuntu 24.04 LTS
 
 ## ライセンスと著作権
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
