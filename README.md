@@ -1,8 +1,6 @@
-# robosys2025
-ロボットシステム学用のリポジトリ
-
 # year_conv
 西暦と和暦を相互に変換するコマンドです。
+
 [![test]((https://github.com/kantahira/robosys2025/blob/main/.github/workflows/test.yml)](https://github.com/kantahira/robosys2025/blob/main/year_conv)
 
 ## 機能
@@ -45,8 +43,6 @@ $ echo r5 | ./year_conv
 
 ## ライセンスと著作権
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-
-* このパッケージのコードの一部は、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです。[ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp)
 
 * © 2025 Kanta Hirazawa
 
