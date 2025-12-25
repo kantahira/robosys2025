@@ -51,8 +51,10 @@ def main():
                     print(ad_year)
                 else:
                     print(f"不明な元号:{line}", file=sys.stderr)
+                    sys.exit(1)
             else:
                 print(f"計算不可: {line}", file=sys.stderr)
+                sys.exit(1)
 
 if __name__ == "__main__":
     main()
